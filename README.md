@@ -89,31 +89,31 @@ You can paste your result images below in GitHub like this:
 ### 1️⃣ Spend by Year
 
 ```markdown
-![Spend by Year](screenshots/spend_by_year.png)
+![Spend by Year](EDA_images/spend_by_year.png)
 ```
 
 ### 2️⃣ Spend by Category
 
 ```markdown
-![Spend by Category](screenshots/spend_by_category.png)
+![Spend by Category](EDA_images/spend_by_expense.png)
 ```
 
 ### 3️⃣ Top Vendors (Valid Spend)
 
 ```markdown
-![Top Vendors](screenshots/top_vendors.png)
+![Top Vendors](EDA_images/top_vendors.png)
 ```
 
 ### 4️⃣ Approval Status Breakdown
 
 ```markdown
-![Approval Status](screenshots/approval_status.png)
+![Approval Status](EDA_images/approval_status.png)
 ```
 
 ### 5️⃣ Department Spend per Year
 
 ```markdown
-![Dept Spend Per Year](screenshots/dept_spend_per_year.png)
+![Dept Spend Per Year](EDA_images/dept_spend_per_year.png)
 ```
 
 ---
