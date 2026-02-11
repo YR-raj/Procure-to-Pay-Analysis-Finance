@@ -1,0 +1,8 @@
+employee_id,employee_name,department_id,role,approval_limit
+100,A. Sharma,1,Manager,50000.0
+101,Rohit Verma,2,Analyst,20000.0
+102,S Neha,99,Executive,
+103,Karan Singh,3,HR Lead,30000.0
+104,Neha S,4,IT Support,15000.0
+105,Pooja R,5,Finance Exec,25000.0
+106,Amit K,2,Analyst,18000.0

@@ -1,0 +1,7 @@
+department_id,department_name,cost_center_code
+1,Finance,CC100
+2,fin.,CC101
+3,Human Resources,CC200
+4,HR,CC200
+5,IT Dept,CC300
+5,IT department,CC300

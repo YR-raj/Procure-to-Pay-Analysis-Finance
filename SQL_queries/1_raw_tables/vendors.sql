@@ -1,0 +1,1 @@
+SELECT * FROM finance_dataset.vendors;
