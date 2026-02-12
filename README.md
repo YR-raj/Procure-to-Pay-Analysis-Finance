@@ -27,36 +27,18 @@ The dataset represents:
 
 ---
 
-## 🗂️ Repository Structure
+## 🛠️ Tools & Techniques
 
-```markdown
-project/
-│
-├── raw_tables/
-│   ├── raw_transactions.sql
-│   ├── raw_vendors.sql
-│   ├── raw_employees.sql
-│   └── raw_departments.sql
-│
-├── clean_tables/
-│   ├── transactions_clean.sql
-│   ├── vendors_clean.sql
-│   ├── employees_clean.sql
-│   └── departments_clean.sql
-│
-├── views/
-│   ├── valid_transactions.sql
-│   ├── spend_by_vendor.sql
-│   ├── risky_amount.sql
-│   └── time_based_view.sql
-│
-└── analytics/
-    ├── top_vendors.sql
-    ├── spend_by_year.sql
-    ├── spend_by_category.sql
-    ├── dept_spend_per_year.sql
-    └── approval_analysis.sql
-```
+* **Database:** MySQL
+* **Core skills demonstrated:**
+
+  * Data cleaning in SQL
+  * Views for modular analytics
+  * CASE statements
+  * Regex validation
+  * Aggregations & grouping
+  * Multi-table joins
+  * Data quality flags
 
 ---
 
@@ -82,9 +64,7 @@ Major data quality issues identified:
 
 ---
 
-## 📊 Key Analyses (Screenshots to be Added)
-
-You can paste your result images below in GitHub like this:
+## 📊 Key Analyses 
 
 ### 1️⃣ Spend by Year
 
@@ -115,11 +95,10 @@ Even with limited clean data, the analysis revealed clear patterns:
 * **Employee-related spend dominates**
 
   * Meals + Travel together form the majority of valid spend.
-  * Suggests policy review on travel and meal reimbursements.
 
 * **High vendor concentration risk**
 
-  * Three vendors account for almost all analyzable spend.
+  * Out of three vendors, Dell alone has 42% of total spending.
   * Indicates dependency risk and weak vendor diversification.
 
 * **Weak approval governance**
@@ -129,7 +108,7 @@ Even with limited clean data, the analysis revealed clear patterns:
 
 * **Finance becoming more dominant over time**
 
-  * Early years: HR-heavy spending.
+  * Early years: HR-heavy spending → likely hiring, training, and employee benefits.
   * Later years: Finance leads spending → likely compliance, systems, or audits.
 
 ---
@@ -138,28 +117,19 @@ Even with limited clean data, the analysis revealed clear patterns:
 
 Based on this analysis, I would recommend:
 
-1. **Implement strict date validation at data entry**
-
-   * Block impossible dates like `31/02/2024` at source.
-
-2. **Standardize vendor master data**
-
-   * Enforce unique vendor IDs with clean naming conventions.
-
-3. **Strengthen approval workflows**
+1. **Strengthen approval workflows**
 
    * No transaction should exist with `not_known` status.
-   * Auto-flag missing approvals.
 
-4. **Reduce vendor dependency**
+2. **Reduce vendor dependency**
 
    * Introduce alternative suppliers to reduce procurement risk.
 
-5. **Audit high-cost categories**
+3. **Audit high-cost categories**
 
    * Review Meals & Travel policies and reimbursement limits.
 
-6. **Create automated data quality checks**
+4. **Create automated data quality checks**
 
    * Run SQL validations daily before reporting.
 
@@ -175,28 +145,4 @@ Based on this analysis, I would recommend:
 
 ---
 
-## 🛠️ Tools & Techniques
 
-* **Database:** MySQL
-* **Core skills demonstrated:**
-
-  * Data cleaning in SQL
-  * Views for modular analytics
-  * CASE statements
-  * Regex validation
-  * Aggregations & grouping
-  * Multi-table joins
-  * Data quality flags
-
----
-
-## ✍️ Author
-
-**Yash Raj**
-Aspiring Data Analyst | NLP Enthusiast | SQL & Python Practitioner
-
-If you want, I can next:
-
-* rewrite this in a **resume-ready bullet format**, or
-* convert this into a **portfolio case study**, or
-* turn this into a **LinkedIn post**.
