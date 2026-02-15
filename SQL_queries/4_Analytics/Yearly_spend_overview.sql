@@ -1,28 +1,37 @@
 /*Time based analysis*/
-WITH monthly_spend AS(
+WITH yearly_spend AS(
 	SELECT 
 		YEAR(transaction_date) AS year,
 		SUM(amount) AS total_spend
 	FROM valid_transactions
 	GROUP BY year
 	ORDER BY year
-),
+), 
 
-overall_spend AS(
-	SELECT valid_amount
-	FROM valid_amount_only
+lag_cte AS(
+	SELECT 
+		*,
+		LAG(total_spend) OVER(ORDER BY year) AS previous_amount
+	FROM yearly_spend
 )
 
 SELECT 
-	t1.year,
-    t1.total_spend,
-    ROUND((t1.total_spend/t2.valid_amount) * 100, 2) AS distribution_percentage
-FROM monthly_spend t1
-CROSS JOIN overall_spend t2
-ORDER BY t1.year, t1.total_spend;
+	*,
+    ROUND(((total_spend - previous_amount)/previous_amount)*100, 2) AS `YoY%`
+FROM lag_cte 
+ORDER BY year;
 
 /*BUSINESS IMPLICATION*/
--- Overall the spend is increasing year-by-year. 
--- A sharp spike can be seen in 2023, suggesting high-activity or new_projects.
--- Following the year, there is a dip 
+-- The overall spending trend follows a realistic financial cycle:
+-- contraction → aggressive expansion → correction → stabilization.
 
+-- Year 2022 shows significant contraction in spending (-27.12%)
+-- Possible reasons: cost-cutting measures or reduce procurement
+
+-- Following year 2023 shows high spending spike (+78.81%)
+-- suggesting expansion activities such as onboarding new vendors,
+-- capital investments, infrastructure upgrades, or enhanced employee programs.
+
+-- Year 2024 and 2025 shows a controlled correction and stable growth,
+-- which may indicate normalization after an unusually high spending year, 
+-- and improved financial planning

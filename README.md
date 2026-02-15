@@ -64,9 +64,11 @@ Major data quality issues identified:
 
 ---
 
+## 🔄 Phase 2 — Data Analysis
+
 ## 📊 Key Analyses 
 
-### 1️⃣ Spend by Year
+### 1️⃣ Spend by Year `(YoY%)`
 
 ![Spend by Year](EDA_images/spend_by_year.png)
 
@@ -92,13 +94,20 @@ Major data quality issues identified:
 
 Even with limited clean data, the analysis revealed clear patterns:
 
+* **Year Over Year (YoY%) Analysis**
+
+  * 2022 shows sharp contraction (-27%).
+  * 2023 reflects aggressive expansion (+79%).
+  * 2024–2025 indicate correction and stabilization.
+  * Suggests recovery after cost-cutting followed by improved financial control.
+
 * **Employee-related spend dominates**
 
   * Meals + Travel together form the majority of valid spend.
 
 * **High vendor concentration risk**
 
-  * Out of three vendors, Dell alone has 42% of total spending.
+  * Out of three vendors, Dell alone has **`42%`** of total spending.
   * Indicates dependency risk and weak vendor diversification.
 
 * **Weak approval governance**
